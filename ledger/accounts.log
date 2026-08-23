@@ -1,0 +1,66 @@
+[2026-08-21T21:34:02.368191000Z INFO  agave_ledger_tool] agave-ledger-tool 3.0.8 (src:b4d1c774; feat:3604001754, client:Agave)
+[2026-08-21T21:34:02.370433000Z INFO  solana_ledger::blockstore] Maximum open file descriptors: 1048575
+[2026-08-21T21:34:02.370449000Z INFO  solana_ledger::blockstore] Opening blockstore at "/Users/parvat/GOR/backup/ledger/rocksdb"
+[2026-08-21T21:34:02.370580000Z INFO  solana_ledger::blockstore_db] Opening Rocks with secondary (read only) access at: "/Users/parvat/GOR/backup/ledger/rocksdb/solana-secondary". This secondary access could temporarily degrade other accesses, such as by agave-validator
+[2026-08-21T21:34:02.418313000Z INFO  solana_ledger::blockstore_db] Rocks's automatic compactions are disabled due to Secondary access
+[2026-08-21T21:34:02.418345000Z INFO  solana_ledger::blockstore] Opening blockstore done; blockstore open took 47ms
+[2026-08-21T21:34:02.418561000Z INFO  agave_ledger_tool::ledger_utils] Default accounts path is switched aligning with Blockstore's secondary access: "/Users/parvat/GOR/backup/ledger/ledger_tool/accounts"
+[2026-08-21T21:34:02.418578000Z INFO  agave_ledger_tool::ledger_utils] Cleaning contents of account path: /Users/parvat/GOR/backup/ledger/ledger_tool/accounts/run
+[2026-08-21T21:34:02.418797000Z INFO  agave_ledger_tool::ledger_utils] Cleaning account paths took 220us
+[2026-08-21T21:34:02.418805000Z INFO  agave_ledger_tool::ledger_utils] Cleaning contents of account snapshot paths: ["/Users/parvat/GOR/backup/ledger/ledger_tool/accounts/snapshot"]
+[2026-08-21T21:34:02.418814000Z INFO  solana_runtime::snapshot_utils] Unable to read bank snapshots directory '/Users/parvat/GOR/backup/ledger/ledger_tool/snapshots': No such file or directory (os error 2)
+[2026-08-21T21:34:02.418888000Z INFO  solana_ledger::bank_forks_utils] Initializing bank snapshots dir: /Users/parvat/GOR/backup/ledger/ledger_tool/snapshots
+[2026-08-21T21:34:02.418965000Z INFO  solana_runtime::snapshot_bank_utils] Loading bank from full snapshot archive: ledger/snapshots/snapshot-79798680-ANzLbgsi456hxAg2b3YyFXQepewULSEYohQNTKbsmdKk.tar.zst, and incremental snapshot archive: Some("ledger/snapshots/incremental-snapshot-79798680-79816880-Ff3te1m7NW22Ai3JWTM1BqUWuUGUkVEc8VfYZhcR4bqP.tar.zst")
+[2026-08-21T21:34:04.500802000Z INFO  solana_runtime::snapshot_utils::snapshot_storage_rebuilder] rebuilt storages for 16868/45494 slots with 0 collisions
+[2026-08-21T21:34:06.565339000Z INFO  solana_runtime::snapshot_utils::snapshot_storage_rebuilder] rebuilt storages for 34102/45494 slots with 0 collisions
+[2026-08-21T21:34:07.962446000Z INFO  solana_accounts_db::hardened_unpack] unpacked 45499 entries total
+[2026-08-21T21:34:07.965900000Z INFO  solana_runtime::snapshot_utils] snapshot untar took 5.5s
+[2026-08-21T21:34:07.974931000Z INFO  solana_accounts_db::hardened_unpack] unpacked 7 entries total
+[2026-08-21T21:34:07.982107000Z INFO  solana_runtime::snapshot_utils] incremental snapshot untar took 6ms
+[2026-08-21T21:34:07.984913000Z INFO  solana_accounts_db::read_only_accounts_cache] AccountsReadCacheEvictor has started
+[2026-08-21T21:34:07.988007000Z INFO  solana_runtime::serde_snapshot] Building accounts index...
+[2026-08-21T21:34:08.102202000Z INFO  solana_accounts_db::accounts_db] visit_zero_lamport_pubkeys_during_startup: 0 pubkeys, 0 after dedup
+[2026-08-21T21:34:08.102718000Z INFO  solana_accounts_db::accounts_db] accounts data len: 78329308
+[2026-08-21T21:34:08.102725000Z INFO  solana_accounts_db::accounts_db] insert all zero slots to clean at startup 0
+[2026-08-21T21:34:08.147496000Z INFO  solana_metrics::metrics] metrics disabled: environment variable not found
+[2026-08-21T21:34:08.147575000Z INFO  solana_metrics::metrics] datapoint: generate_index overall_us=159453i total_us=109491i scan_stores_us=888i insertion_time_us=6914i storage_size_storages_us=2109i index_flush_us=46i total_items_including_duplicates=63926i accounts_data_len_dedup_time_us=494i total_duplicate_slot_keys=27i total_num_unique_duplicate_keys=7i num_duplicate_accounts=20i populate_duplicate_keys_us=2106i total_slots=45496i copy_data_us=0i par_duplicates_lt_hash_us=362i num_zero_lamport_single_refs=0i visit_zero_lamports_us=22i all_accounts_are_zero_lamports_slots=0i mark_obsolete_accounts_us=0i num_obsolete_accounts_marked=0i num_slots_removed_as_obsolete=0i
+[2026-08-21T21:34:08.147757000Z INFO  solana_runtime::serde_snapshot] Building accounts index... Done in 159.740458ms
+[2026-08-21T21:34:08.148386000Z INFO  solana_runtime::bank] Loading Stakes took:  took 175us
+[2026-08-21T21:34:08.148905000Z INFO  solana_runtime::serde_snapshot] rent_collector: RentCollector { epoch: 184, epoch_schedule: EpochSchedule { slots_per_epoch: 432000, leader_schedule_slot_offset: 432000, warmup: false, first_normal_epoch: 0, first_normal_slot: 0 }, slots_per_year: 157784629.968, rent: Rent { lamports_per_byte_year: 3480, exemption_threshold: 2.0, burn_percent: 50 } }
+[2026-08-21T21:34:08.148941000Z INFO  solana_runtime::snapshot_bank_utils] rebuild bank from snapshots took 164ms
+[2026-08-21T21:34:08.148944000Z INFO  solana_runtime::snapshot_bank_utils] Rebuilding status cache from /Users/parvat/GOR/backup/ledger/ledger_tool/snapshots/tmp-snapshot-archive-JVNz93/snapshots/status_cache
+[2026-08-21T21:34:08.150635000Z INFO  solana_runtime::bank] Cleaning... Skipped.
+[2026-08-21T21:34:08.150648000Z INFO  solana_runtime::bank] Shrinking... Skipped.
+[2026-08-21T21:34:08.150651000Z INFO  solana_runtime::bank] Verifying bank...
+[2026-08-21T21:34:08.150650000Z INFO  solana_runtime::bank] Verifying accounts in background...
+[2026-08-21T21:34:08.150664000Z INFO  solana_runtime::bank] bank frozen: 79816880 hash: FzRiu3nzKgjFSp7xwEpmFVdGQMvcZDjF6aAVY8BDuzcf signature_count: 1 last_blockhash: 4KeKkY2yx2e3FWCqSwzEc9cwzghKbYFEShPN2DwT3mxA capitalization: 1000000261047933897, accounts_lt_hash checksum: Ff3te1m7NW22Ai3JWTM1BqUWuUGUkVEc8VfYZhcR4bqP, stats: BankHashStats { num_updated_accounts: 7, num_removed_accounts: 0, num_lamports_stored: 373936517974, total_data_len: 161395, num_executable_accounts: 0 }
+[2026-08-21T21:34:08.150674000Z INFO  solana_runtime::bank] Verifying bank... Done.
+[2026-08-21T21:34:08.153896000Z INFO  solana_metrics::metrics] datapoint: reconstruct_accountsdb_from_fields() accountsdb-notify-at-start-us=159770i
+[2026-08-21T21:34:08.153920000Z INFO  solana_metrics::metrics] datapoint: bank-new-from-fields accounts_data_len-from-snapshot=78329715i accounts_data_len-from-generate_index=78329308i stakes_accounts_load_duration_us=182i
+[2026-08-21T21:34:08.153928000Z INFO  solana_metrics::metrics] datapoint: bank-hash_internal_state slot=79816880i total_us=9i
+[2026-08-21T21:34:08.153934000Z INFO  solana_metrics::metrics] datapoint: verify_snapshot_bank clean_us=13i shrink_us=2i verify_accounts_us=1291i verify_bank_us=20i
+[2026-08-21T21:34:08.153954000Z INFO  solana_metrics::metrics] datapoint: bank_from_snapshot_archives untar_full_snapshot_archive_us=5536162i untar_incremental_snapshot_archive_us=6350i rebuild_bank_us=164578i verify_bank_us=1334i
+[2026-08-21T21:34:08.222752000Z INFO  agave_ledger_tool::ledger_utils] Using: block-verification-method: unified-scheduler
+[2026-08-21T21:34:08.222808000Z INFO  solana_runtime::bank_forks] Installed new scheduler_pool into bank_forks: SchedulerPool { scheduler_inners: Mutex { data: [], poisoned: false, .. }, block_production_scheduler_inner: Mutex { data: NotSpawned, poisoned: false, .. }, trashed_scheduler_inners: Mutex { data: [], poisoned: false, .. }, timeout_listeners: Mutex { data: [], poisoned: false, .. }, common_handler_context: CommonHandlerContext { log_messages_bytes_limit: None, transaction_status_sender: None, replay_vote_sender: None, prioritization_fee_cache: PrioritizationFeeCache { cache: RwLock { data: {}, poisoned: false, .. }, service_thread: Some(JoinHandle { .. }), sender: Sender { .. }, metrics: PrioritizationFeeCacheMetrics { successful_transaction_update_count: 0, purged_duplicated_bank_count: 0, total_update_elapsed_us: 0, total_cache_lock_elapsed_us: 0, total_entry_update_elapsed_us: 0, total_block_finalize_elapsed_us: 0, total_calculate_prioritization_fee_elapsed_us: 0 } } }, block_verification_handler_count: None, banking_stage_handler_context: Mutex { data: None, poisoned: false, .. }, weak_self: (Weak), next_scheduler_id: 0, max_usage_queue_count: 262144, scheduler_pool_sender: Sender { .. }, cleaner_thread: JoinHandle { .. }, _phantom: PhantomData<solana_unified_scheduler_pool::DefaultTaskHandler> }
+[2026-08-21T21:34:08.222856000Z INFO  solana_ledger::blockstore_processor] Processing ledger from slot 79816880...
+[2026-08-21T21:34:08.222860000Z INFO  solana_ledger::blockstore_processor] Start slot 79816880 isn't a root, and won't be updated due to secondary blockstore access
+[2026-08-21T21:34:08.222838000Z INFO  solana_unified_scheduler_pool] cleaner_main_loop: started...
+[2026-08-21T21:34:08.222889000Z INFO  solana_ledger::blockstore_processor] ledger holds data through slot 0
+[2026-08-21T21:34:08.222872000Z INFO  solana_runtime::accounts_background_service] AccountsBackgroundService has started
+[2026-08-21T21:34:08.222907000Z WARN  solana_ledger::blockstore_processor] Starting slot 79816880 is not in Blockstore, unable to process
+[2026-08-21T21:34:08.222922000Z INFO  solana_ledger::blockstore_processor] ledger processing timing: ExecuteTimings { metrics: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], details: ExecuteDetailsTimings { serialize_us: 0, create_vm_us: 0, execute_us: 0, deserialize_us: 0, get_or_create_executor_us: 0, changed_account_count: 0, total_account_count: 0, create_executor_register_syscalls_us: 0, create_executor_load_elf_us: 0, create_executor_verify_code_us: 0, create_executor_jit_compile_us: 0, per_program_timings: {} }, execute_accessories: ExecuteAccessoryTimings { feature_set_clone_us: 0, get_executors_us: 0, process_message_us: 0, process_instructions: ExecuteProcessInstructionTimings { total_us: 0, verify_caller_us: 0, process_executable_chain_us: 0, verify_callee_us: 0 } } }
+[2026-08-21T21:34:08.222936000Z INFO  solana_ledger::blockstore_processor] ledger processed in 60 µs and 625 ns. root slot is 79816880, 1 bank: 79816880
+[2026-08-21T21:34:08.225855000Z INFO  agave_ledger_tool] Scanning all accounts
+[2026-08-21T21:34:08.226263000Z INFO  solana_metrics::metrics] datapoint: process_blockstore_from_root total_time_us=60i frozen_banks=1i slot=79816880i num_slots_processed=0i num_new_roots_found=0i forks=1i
+[2026-08-21T21:34:08.298082000Z INFO  solana_runtime::bank] Verifying accounts in background... Done in 147.410042ms
+[2026-08-21T21:34:08.299836000Z INFO  solana_metrics::metrics] datapoint: startup_verify_accounts total_us=147410i calculate_accounts_lt_hash_us=147406i
+[2026-08-21T21:34:08.325371000Z INFO  solana_runtime::accounts_background_service] AccountsBackgroundService has stopped
+[2026-08-21T21:34:08.925880000Z INFO  agave_ledger_tool] accounts scan took 700ms
+[2026-08-21T21:34:08.925887000Z INFO  solana_runtime::bank_forks] BankForks::drop(): started...
+[2026-08-21T21:34:08.925892000Z INFO  solana_unified_scheduler_pool] SchedulerPool::uninstalled_from_bank_forks(): started...
+[2026-08-21T21:34:08.925906000Z INFO  solana_unified_scheduler_pool] cleaner_main_loop: ...finished
+[2026-08-21T21:34:08.925998000Z INFO  solana_unified_scheduler_pool] SchedulerPool::uninstalled_from_bank_forks(): ...finished
+[2026-08-21T21:34:08.930354000Z INFO  solana_runtime::bank_forks] BankForks::drop(): ...finished
+[2026-08-21T21:34:08.930361000Z INFO  solana_runtime::accounts_background_service] bank DropCallback signal queue disconnected.
+[2026-08-21T21:34:12.724452000Z INFO  solana_accounts_db::read_only_accounts_cache] AccountsReadCacheEvictor has stopped
+[2026-08-21T21:34:12.725107000Z INFO  agave_ledger_tool] ledger tool took 10.4s
